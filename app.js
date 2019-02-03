@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var morgan = require("morgan");
 
-var users = require("./routes/users");
+var routes = require("./routes");
 
 var app = express();
 
@@ -18,6 +18,6 @@ app.use(morgan("combined"));
 
 // app.use(express.static('public'))
 
-app.use("/fs", users);
+app.use("/fs", routes);
 
 module.exports = app;
